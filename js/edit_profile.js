@@ -1,7 +1,7 @@
 async function getPageStatsAPI() {
   try {
     result = await $.get(
-      "http://localhost/Wael_Kaddoura_Implement_Facebook/php/APIs/get_page_stats.php",
+      "php/APIs/get_page_stats.php",
       {},
       function (data, textStatus, jqXHR) {
         return data;
@@ -16,7 +16,7 @@ async function getPageStatsAPI() {
 async function getUserDataAPI() {
   try {
     result = await $.get(
-      "http://localhost/Wael_Kaddoura_Implement_Facebook/php/APIs/get_my_profile_data.php",
+      "php/APIs/get_my_profile_data.php",
       {},
       function (data, textStatus, jqXHR) {
         return data;
@@ -31,7 +31,7 @@ async function getUserDataAPI() {
 async function getNotificationsAPI() {
   try {
     result = await $.get(
-      "http://localhost/Wael_Kaddoura_Implement_Facebook/php/APIs/get_notifications.php",
+      "php/APIs/get_notifications.php",
       {},
       function (data, textStatus, jqXHR) {
         return data;
@@ -45,10 +45,9 @@ async function getNotificationsAPI() {
 
 async function sendFriendRequestAPI(reciever_id) {
   try {
-    result = await $.post(
-      "http://localhost/Wael_Kaddoura_Implement_Facebook/php/APIs/send_friend_request.php",
-      { reciever_id: reciever_id }
-    );
+    result = await $.post("php/APIs/send_friend_request.php", {
+      reciever_id: reciever_id,
+    });
   } catch (error) {
     console.log(error);
   }
@@ -56,10 +55,9 @@ async function sendFriendRequestAPI(reciever_id) {
 
 async function blockUserAPI(blocked_user_id) {
   try {
-    result = await $.post(
-      "http://localhost/Wael_Kaddoura_Implement_Facebook/php/APIs/block_user.php",
-      { blocked_user_id: blocked_user_id }
-    );
+    result = await $.post("php/APIs/block_user.php", {
+      blocked_user_id: blocked_user_id,
+    });
   } catch (error) {
     console.log(error);
   }
