@@ -1,6 +1,6 @@
 # Facebook-Clone
 
-A facebook clone that has the basic social media platform features:
+A Facebook clone that has the basic social media platform features:
   
   - Users are able to create accounts (Sign Up)
   - Users are able to login
